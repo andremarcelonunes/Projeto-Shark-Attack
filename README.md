@@ -42,7 +42,7 @@ I started seeing the file and I could see that there were many problems on it. F
 
 During the process of identify age groups and others information regarding to it, many graphs were created, but I am going to focus on the main subject on next steps.
 
-### White shark attack  young, childrem  or  eldely  people? 
+### White shark attack  young, children  or  eldely  people? 
 
 Just to clarify one important problem on this dataset, Many attacks on humans the  species are not identified, this number is about  64% of dataset.  
 Let´s see all shark attacks on table bellow:
