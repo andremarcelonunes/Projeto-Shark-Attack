@@ -68,7 +68,7 @@ so, when you see the attacks whith species identified, you see white shark on th
 
 
 
-![](archive\dist_age.png)
+![](archive/dist_age.png)
 
 The graph above is not a normal curve, but its similar to that. We can infer that mean is between 20's 
 
@@ -80,13 +80,13 @@ Let´s remember that all other cases that species weren´t idendtify represent 6
 
 Let´s see the distribution per species on the following graph 
 
-![](archive\dit_species.png)
+![](archive/dit_species.png)
 
 The attacks are concentrated in 20`s, but white shark is the red on above others.  
 
 Now, let´s see the same distribution curve for white shark :
 
-![](archive\dist_white.png)
+![](archive/dist_white.png)
 
  It´s not so different from that for all, but there on  right tail is little change. 
 
@@ -195,7 +195,7 @@ Even though, the mean of age say that white shark prefer a group of age, people 
 
 Look the pattern
 
-![](archive\pattern_visual.jpg)
+![](archive/pattern_visual.jpg)
 
 
 
