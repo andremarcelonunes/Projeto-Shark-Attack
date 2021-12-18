@@ -1,4 +1,4 @@
-﻿﻿# Shark Attack
+# Shark Attack
 
 My focus on this project were to clean the dataset that came from Kaggle, based on research by  https://www.sharkattackfile.net/index.htm
 During my job, I tryied to answer the following question: 
@@ -14,7 +14,7 @@ White Shark belongs to Family Lamnidae - Mackerel Sharks and your scientifc name
 - caudal fin nearly symmetrical, with lower lobe almost as long as the upper
 - coastal and oceanic; cool temperate to tropical zones of the Atlantic, Pacific, and Indian oceans
 
-![](archive\lamna-nasus.gif)
+![](/archive/lamna-nasus.gif)
 
 ## Getting Started
 
