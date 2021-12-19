@@ -94,7 +94,7 @@ To better understanding, the dataset was cut in 10 pieces of age group. I don´t
 Let´s see how many attacks happened for  each  age group by white shark:
 
 ```
-(9.6, 18.2]	    0.162528
+(9.6, 18.2]	 0.162528
 (18.2, 26.8]	0.311512
 (26.8, 35.4]	0.221219
 (35.4, 44.0]	0.133183
@@ -114,7 +114,7 @@ Let´s see  for all others cases:
 
 ```
 
-0	(9.6, 18.2]	    0.277258
+0	(9.6, 18.2]	 0.277258
 1	(18.2, 26.8]	0.266385
 2	(26.8, 35.4]	0.178496
 3	(35.4, 44.0]	0.112353
