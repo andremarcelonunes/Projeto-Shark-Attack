@@ -18,20 +18,20 @@ White Shark belongs to Family Lamnidae - Mackerel Sharks and your scientifc name
 
 ## Getting Started
 
-I started seeing the file and I could see that there were many problems on it. First ofall, the duplicated line were about 67,5% of all lines. The names of collumns were hard to interprete easly, very confused. 
+I started seeing the file and I could see that there were many problems on it. First all, the duplicated lines were about 67,5% of all lines. The names of columns were hard to interpret easily, very confused! 
 
-## Cleanning was a hard hard work!
+## Cleaning was a hard hard work!
 
 ### What I did to Cleanup?
 
-  * Delete empyt columns and no useful information on DataFrame
+  * Delete empty columns and no useful information on Dataframe
   * Investigating column age, lacked and unclear information on that 
   * Fixing age with a dictionary, too many conditions to deal on that
-  * Creating a new collum called "new_age"
-  * Creating a Function for mapping Age collum and assigned the right value to new_age
-  * Some cases were marked as "check" in new_age, after analysing, they were deleted and new_age was converted to int64 type
-  * Regognizing species on DataFrame, based on print, it was created an excel file to fix it
-  * Based on excel file of scpecies, It was created a new DataFrame
+  * Creating a new column called "new_age"
+  * Creating a Function for mapping Age column and assigned the right value to new_age
+  * Some cases were marked as "check" in new_age cause seem ambiguous , after analyzing them, they were deleted and new_age column was converted to int64 type
+  * Recognizing species on DataFrame, based on print, it was created an excel file to fix it
+  * Based on excel file of species, It was created a new DataFrame
   * Merging both to create a new one called "tb_sharkattack_new"
 
 ### Start point of analisys
@@ -40,12 +40,12 @@ I started seeing the file and I could see that there were many problems on it. F
 
 ## The Analysis 
 
-During the process of identify age groups and others information regarding to it, many graphs were created, but I am going to focus on the main subject on next steps.
+During the process of identify age groups and others information regarding to it, many graphs were created to explore information, but I am going to focus on those regarding to main subject on next steps.
 
-### White shark attack  young, children  or  eldely  people? 
+### White shark attack  young, children  or  elderly  people? 
 
-Just to clarify one important problem on this dataset, Many attacks on humans the  species are not identified, this number is about  64% of dataset.  
-Let´s see all shark attacks on table bellow:
+Just to clarify one important problem on this dataset, Many attacks on humans, the  species are not identified, this number is about  64% of dataset. So, this can create a possible bias for this study.  
+Let´s see all shark attacks identified on table bellow:
 
 ```
 white	  13.440048
@@ -57,12 +57,12 @@ whaler	  1.540320
 mako	  0.815464
 
 ````
-so, when you see the attacks whith species identified, you see white shark on the top, but it represents only 13,44%
+Look, when you see the attacks with species identified, you see white shark on the top, but it represents only 13,44%.
 
 
 
 
-#### Let´s see better this number for white shark 
+#### Let´s see better this number for all and white shark attacks
 
 
 
@@ -72,13 +72,13 @@ so, when you see the attacks whith species identified, you see white shark on th
 
 The graph above is not a normal curve, but its similar to that. We can infer that mean is in the  20's 
 
-Let´s use mean to consolidate the age. This indicator of central tendecy works well when you don´t have outliers.  
-looking into dataset,  you can see that age mean for white shark attacks is 30,4 years, differente from 27,4 years for all dataset. 
-Let´s remember that all other cases that species weren´t idendtify represent 64% of data and mean of age for those is 26 years. 
+Let´s use mean to consolidate the age. This indicator of central tendency works well when you don´t have outliers.  
+looking into dataset,  you can see that age mean for white shark attacks is 30,4 years, differente from 27,4 when see the whole dataset. 
+Let´s remember that all other cases that species weren't identified represent 64% of data and mean of age for those is 26 years. For sure,  it´s bring the mean for all  close to 26 years. But, what about per species?
 
 
 
-Let´s see the distribution per species on the following graph 
+Let´s see the distribution per species on the following graph: 
 
 ![](archive/dit_species.png)
 
@@ -88,14 +88,13 @@ Now, let´s see the same distribution curve for white shark :
 
 ![](archive/dist_white.png)
 
-It´s not so different from that for all attacks, but there strange  tail on right side of the graph. 
+It´s not so different from that for all attacks, but there strange  tail on right side of the graph, isn't  it?  
 
-To better undersdanting, the dataset was cut in 10 pieces of age group. I don´t see any consesus about group age from other sources, so I thought that  it would be a good 
-idea to create this groups 
-Let´s see how many attacks happend in each  age group by white shark 
+To better understanding, the dataset was cut in 10 pieces of age group. I don´t see any consensus about group age from other sources, It depends highly on kind of research you are doing,  so I thought that  it would be a good  idea to create this groups. 
+Let´s see how many attacks happened for  each  age group by white shark:
 
 ```
-(9.6, 18.2]	0.162528
+(9.6, 18.2]	    0.162528
 (18.2, 26.8]	0.311512
 (26.8, 35.4]	0.221219
 (35.4, 44.0]	0.133183
@@ -107,7 +106,7 @@ Let´s see how many attacks happend in each  age group by white shark
 (78.4, 87.0]	0.000000
 ```
 
-As you can see the attacks happen majoritly  between 18 and 44 years. 
+As you can see the attacks happen in majority   between 18 and 44 years. 
 
 
 
@@ -115,7 +114,7 @@ Let´s see  for all others cases:
 
 ```
 
-0	(9.6, 18.2]	0.277258
+0	(9.6, 18.2]	    0.277258
 1	(18.2, 26.8]	0.266385
 2	(26.8, 35.4]	0.178496
 3	(35.4, 44.0]	0.112353
@@ -127,10 +126,10 @@ Let´s see  for all others cases:
 9	(78.4, 87.0]	0.001510
 
 ```
-Hum!? Change a little, isn´t?  it seems like white shark attack less childrem! Is it true!?
+Huum!? Change a little, isn't?  it seems like white shark attack less people bellow 18  than others ! Is it really true!?
 
 
-### Let´s check the activities envolved in those attacks by white shark 
+### Let´s check the activities involved in those attacks by white shark 
 
 Maybe, knowing what people are doing it´s possible to know your age. Maybe?
 
@@ -150,7 +149,7 @@ SUP                   2
 ```
 More than 50% of people were surfing, diving, fishing  or  swimming when were attacked by white shark. 
 
-What about others  activities for all dataset?
+What about these  activities for all dataset?
 
 ```
 surfing             887
@@ -160,15 +159,16 @@ diving              301
 wading              143
 
 ```
-Its seems like diving has relevancy to white skark attack more then other types of activities. 
+Its seems like diving has relevancy to white shark attack more then other types of activities. 
 For white shark it is 18% of attacks and for all others is 9%
 
+Let´s see age group for those activities and their proportions: 
 
-Let´s see age group for those activities an their proportions: 
+###### *multiplying  these numbers per 100 is the same of percentage*
 
 ```
 group Age	prop_surfing	    prop_swimming    prop_diving	prop_fishing
-(9.6, 18.2]	0.296505	        0.347763	     0.116279	    0.139165
+(9.6, 18.2]		0.296505	        0.347763	     0.116279	    0.139165
 (18.2, 26.8]	0.311161	        0.264069	     0.229236	    0.274354
 (26.8, 35.4]	0.174746	        0.124098	     0.292359	    0.270378
 (35.4, 44.0]	0.109357	        0.075036	     0.162791	    0.153082
@@ -185,7 +185,7 @@ group Age	prop_surfing	    prop_swimming    prop_diving	prop_fishing
 
 
 ### Correlation vs Causation
-Even though, the mean of age say that white shark prefer a group of age, people between 18 an 44 years, doing surfing, swimming, diving and fishing, it´s not meaning that the white wants to attack them. Surfing and diving are sports that brings some risk of atttack and  diving has a mean of age greater than others activities. According to article on site https://observador.pt/2021/10/29/novo-estudo-explica-razao-pela-qual-tubaroes-atacam-humanos/, humans are attacked by shark when they "think" humans are their natural food. like seals, turtle and other animals that live in ocean. So sharks don´t hunt humans, and even less chose group of age. They attack from bottom to up, than  someone surfing or diving can be attacked. Diving bring the risk when envolves fishing. Shark can smell far from  hundreds meters the fresh meet or blood of fishes. The probality to be attacked by shark is minimal, according to Insitute of Australian Science bettween 1970 and 2000 died 12 people caused by shark while died 150 hit by coconut. So be carrefull with coconut tree on beach more than sharks.  
+Even though, the mean of age says that white shark prefer a group of age, people between 18 an 44 years, those are surfing, swimming, diving and fishing, it´s not meaning that the white wants to attack them because of their age. Surfing and diving are sports that brings some risk of atttack, diving has a mean of age greater than others activities. According to article on site https://observador.pt/2021/10/29/novo-estudo-explica-razao-pela-qual-tubaroes-atacam-humanos/, humans are attacked by shark when they "think" humans are their natural food. like seals, turtle and other animals that live in ocean. So sharks don´t hunt humans, and even less chose group of age. They attack from bottom to up, than  someone surfing or diving can be attacked because sharks see them like those animals. Diving bring the high risk when involves fishing. Shark can smell far from  hundreds meters the fresh meet or blood of fishes. The probability to be attacked by shark is minimal, according to Institute of Australian Science between 1970 and 2000 died 12 people caused by shark while died 150 hit by coconut. So be careful with coconut tree on beach more than sharks.  
 
 
 
@@ -205,9 +205,9 @@ In many cases, the white shark were identified by witness and researches whit bi
 
 ## Conclusion
 
-On this study, we can see a lot of attacks to main activities like surfing, swiming and fishing. There no evidence that if you have 30's, you are the next victim of shark. Clearly, people doing these activities are more exposed. I believe age mean for diving has impacted mean age for white shark, but doesn´t mean that they prefer one than others. When shark attack a human, feel that is not your food and  doesn´t eat. it thinks, it´s disgudting!
+On this study, we can see a lot of attacks to main activities like surfing, swimming and fishing. There no evidence that if you have 30's, you are the next victim of  white shark. Clearly, people doing these activities are more exposed. I believe the mean of age for diving has impacted the mean of age for white shark attacks, but doesn't mean that they prefer one than others. When shark attack a human, feel that is not its  food and  doesn't eat. it thinks, it´s disgusting! 😂
 
-Other problem is Availability *bias* can change our perceptions of risk and maybe of researchers when identified the animals, very famous on the movies.  In fact that species need be protected against illegal fishing and others human activities. 
+Other problem is Availability *bias* can change our perceptions of risk and maybe the  researchers and witness can be impacted for this bias when identified the animals. The white is very famous on the movies where it hunt people.  In fact,  that species need be protected against illegal fishing and others human activities that reducing their population. By the way, a good question: Shark attacks is growing up while population is reducing. Why? 🤔
 
 
 
